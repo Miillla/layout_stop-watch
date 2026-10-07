@@ -20,38 +20,34 @@ body {
 
 .stopwatch {
   position: relative;
-  height: $stopwatch-height;
   width: $stopwatch-width;
-  border-radius: $stopwatch-border-radius;
+  height: $stopwatch-height;
   border: $border;
+  border-radius: $stopwatch-border-radius;
 
   &__minutes-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
     width: $minutes-hand-width;
     height: $minutes-hand-length;
     background: $minutes-hand-color;
     border-radius: 2px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
     transform-origin: bottom center;
     transform: translateX(-50%) rotate(0deg);
-
     animation: rotate360 3600s steps(60) linear infinite;
   }
 
   &__seconds-hand {
-    width: $seconds-hand-length;
-    height: $seconds-hand-width;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: $seconds-hand-width;
+    height: $seconds-hand-length;
     background: $seconds-hand-color;
     border-radius: 2px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: center bottom;
-    transform: translate(-50%) rotate(360deg);
-
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(0deg);
     animation: rotate360 60s linear infinite;
   }
 
@@ -67,10 +63,11 @@ body {
   }
 
   &--speed-up {
-    .stopwatch__minute-hand {
+    .stopwatch__minutes-hand {
       animation: rotate360 600s steps(60) linear infinite;
     }
-    .stopwatch__second-hand {
+
+    .stopwatch__seconds-hand {
       animation: rotate360 10s linear infinite;
     }
   }
