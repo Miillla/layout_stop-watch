@@ -34,7 +34,7 @@ body {
     background: $minutes-hand-color;
     border-radius: 2px;
     transform-origin: bottom center;
-    transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(-90deg);
     animation: rotate360 3600s steps(60) linear infinite;
   }
 
@@ -47,7 +47,7 @@ body {
     background: $seconds-hand-color;
     border-radius: 2px;
     transform-origin: bottom center;
-    transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%) rotate(-90deg);
     animation: rotate360 60s linear infinite;
   }
 
